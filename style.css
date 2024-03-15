@@ -1,4 +1,14 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --text-color: #000000;
+    --higlight: #E74646;
+    --hover: #E74646;
+    --homecolor: #FFE5CA;
+    --sectionbg: #FFF3E2;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,5 +16,628 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
 }
 
+/* Text style */
+p {
+    color: var(--text-color);
+    line-height: 1.5em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.625rem;
+    letter-spacing: -2px;
+    line-height: 1.3em;
+}
+
+span {
+    color: var(--higlight);
+    font-size: 18px;
+    margin: .5rem;
+    font-weight: 500;
+}
+
+.home-gallery {
+    margin:  1.625rem;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 350px;
+    border-radius: 15px;
+    gap: 10px; /* Menambahkan jarak antara item */
+    overflow: hidden; /* Menghilangkan gambar yang keluar dari area galeri */
+    mask-image: linear-gradient(to right , rgba(255, 0, 0, 0) 0%, rgb(69, 211, 22) 12.5%, rgb(65, 22, 221) 87.5%, rgba(20, 225, 222, 0) 100%);
+}
+
+.item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover; /* Mengatur agar gambar tidak terpotong dan tanpa berulang */
+    background-repeat: no-repeat; /* Menghindari gambar berulang */
+    transition: flex 0.8s ease;
+}
+
+.item:nth-child(1) {
+    background-image: url(imageasset/download.jpg);
+}
+
+.item:nth-child(2) {
+    background-image: url(imageasset/es\ daluman\ 1.jpg);
+}
+
+.item:nth-child(3) {
+    background-image: url(imageasset/es\ daluman\ 2.jpg);
+}
+
+.item:nth-child(4) {
+    background-image: url(imageasset/RUJAK.jpg);
+}
+
+.item:hover {
+    flex: 4;
+}
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--homecolor) ;
+}
+
+.navbar{
+    display: flex;
+    padding: 1rem 2.5rem;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    max-width: 75rem;
+    gap: 21rem;
+}
+
+.navbar img {
+    max-width: 8rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.control {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.control a {
+    color: var(--text-color);
+    padding: .5rem .75rem;
+}
+
+.control a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.texthome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+    margin: 0 2rem;
+    color: var(--text-color);
+}
+
+.texthome p,h1 {
+    width: 65%;
+}
+
+
+.texthome h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: -3px;
+    margin-bottom: 1.3rem;
+}
+
+.texthome p {
+    font-size: 1.125rem;
+}
+
+.home-img img {
+    max-width: 75rem;
+    display: block;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: cover;
+}
+
+.text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 768px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+section{
+    background-color: var(--sectionbg) ;
+}
+/* Video container */
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Kuliner Makanan */
+.makanan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 2.5rem;
+    align-items: center;
+}
+
+/* Kuliner Makanan */
+.kuliner-makanan-container {
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    padding: 1.5rem 1.5rem;
+    justify-content: center;
+    background-color: #ffefef; /* Warna latar belakang */
+    border-radius: 15px;
+}
+
+.penjelasan-singkat {
+    align-items: center;
+    display: flex;
+    gap: 3rem; /* Mengurangi jarak antara elemen */
+    padding: 2rem; /* Mengurangi padding */
+    border-radius: 15px;
+    background-color: #FFE5CA;
+    max-width: 900px; /* Batasi lebar kontainer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+
+.text-makanan {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.text-makanan p {
+    margin-bottom: 1rem; /* Mengurangi margin bottom */
+}
+
+.img-kuliner {
+    flex: 1; /* Memperbaiki fleksibilitas tata letak */
+}
+
+.img-kuliner img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px; /* Batasi tinggi gambar */
+    display: block;
+    border-radius: 10px; /* Menyesuaikan dengan border-radius container */
+    object-position: center;
+}
+
+/* Komponen Kuliner */
+.Kuliner {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus item saat ukuran layar terlalu kecil */
+    gap: 2rem; /* Menambah jarak antar item */
+    justify-content: center;
+}
+
+.container {
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--higlight);
+    width: calc(33.33% - 1rem); /* Menghitung lebar item dengan mengurangi margin */
+    max-width: 300px; /* Batasi lebar item */
+    color: var(--text-color);
+    text-align: center; /* Pusatkan teks */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi transform dan box-shadow */
+    position: relative; /* Membuat posisi relatif untuk kontainer */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Efek mengangkat saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+.container .img-kuliner {
+    margin-bottom: 1rem; /* Tambah margin bottom untuk penyesuaian teks */
+}
+
+.Kuliner-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem; /* Mengurangi padding bottom */
+}
+
+/* Footer style */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 2.5rem 2.5rem;
+}
+
+.footer-1 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-1 img {
+    width: 6.875rem;
+    height: 3rem;
+}
+
+.link {
+    display: flex;
+    gap: 2rem;
+}
+
+.link a {
+    color: var(--text-color);
+    line-height: 1.5em;
+}
+
+.sosmed {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+}
+
+.sosmed a {
+    display: flex;
+    color: #7387A0;
+}
+
+.sosmed a:hover {
+    color: #A9A8A2;
+}
+
+footer{
+    background-color: var(--sectionbg);
+}
+.footer-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-2 p {
+    color: #858585;
+}
+
+
+/* RENPONSIF */
+@media (max-width: 1199px) { /* Custom Resonsif *?
+    /* Home Section */
+    .wisata, .bayarimg {
+        overflow-x: hidden;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2.5rem;
+        padding: 0;
+    }
+    .navbar.active {
+        padding: 1rem 2rem 4.5rem;
+    }
+    .nav-layout {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    .nav-layout.active {
+        padding: 0;
+    }
+    .nav {
+        display: none;
+    }
+    .control.active{
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .nav.active {
+        display: block;
+    }
+    .layout-img img {
+        max-width: 74rem;
+    }
+    .texthome h1,
+    .texthome p {
+        width: 100%;
+    }
+
+    /* Potofolio Section */
+    .wisata img {
+        max-width: 18.25rem;
+    }
+    .text h2,
+    .text p {
+        width: 100%;
+    }
+
+    /* Tentang Kami */
+    .tiket, .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tiket {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    /* Jadi Partner */
+    .partnerlist {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    .kurang {
+        max-width: 7%;
+    }
+    .lengkap {
+        max-width: 25%;
+    }
+
+    /* Kontak */
+    .img-kontak img {
+        height: 18rem;
+    }
+    .kontak-container {
+        display: flex;
+        gap: 2.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        
+    }
+    .footer-2 {
+        align-items: center;
+    }
+    .control {
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1024px) { /* Laptop */
+    .layout-img img {
+        max-width: 63.5rem;
+    }
+
+    .text p {
+        width: auto;
+    }
+
+    .wisata img {
+        max-width: 18.2rem;
+    }
+
+    .text {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+
+    .layout, .partner {
+        padding: 4rem 2rem;
+    }
+
+    .lengkap {
+        max-width: 15rem;
+    }
+
+    .kurang {
+        max-width: 4rem;
+    }
+}
+
+@media (max-width: 950px) { /* Custom */
+    .layout-img img {
+        max-width: 59rem;
+    }
+}
+
+@media (max-width: 850px) { /* Custom */
+    .layout-img img {
+        max-width: 53rem;
+    }
+}
+
+@media (max-width: 768px) { /* Tablet */
+    .navbar.active {
+        padding: 1rem 1.25rem 4rem;
+    }
+    .nav.active {
+        width: 100%;
+    }
+    .control.active a {
+        padding: 0.5rem 0.75rem;
+    }
+    .nav-layout {
+        padding: 1rem 1.25rem;
+    }
+    .texthome {
+        width: 100%;
+        padding: 4rem 1.25rem 0;
+    }
+    .layout-img img {
+        width: 100%;
+    }
+    .texthome h1 {
+        width: 100%;
+    }
+    .layout, .partner {
+        padding: 4rem 1.25rem;
+    }
+    .text {
+        padding: 0;
+    }
+    .box1 {
+        flex-direction: column;
+    }
+    .partnerlist {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .perusahaan {
+        padding: 0 3.75rem;
+    }
+    .kontak-container {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .img-kontak {
+        width: 100%;
+    }
+    .img-kontak img {
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    .footer {
+        padding: 5rem 1.25rem 2.5rem;
+    }
+    .footer-1, .footer-2{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+    .footer-1 img {
+        width: 22%;
+        height: auto;
+        padding-bottom: 1.7rem;
+    }
+    .footer-2 {
+        gap: 2rem;
+    }
+    .control a {
+        padding: 0;
+    }
+    .control {
+        gap: 3rem;
+    }
+    .link {
+        flex-direction: column;
+        padding-bottom: 3.5rem;
+    }
+}
+
+@media (max-width: 425px) { /* Selular L */
+    html {
+        font-size: 100%;
+    }
+    .layout-img img {
+        width: 100%;
+    }
+    .wisata {
+        width: 100%;
+    }
+    .kontak-container {
+        padding: 4rem 1.25rem ;
+    }
+    .img-kontak img {
+        max-height: 16.5rem;
+        height: 100%;
+        width: 100%;
+    }
+    .footer-1 img {
+        width: 42%;
+    }
+}
+
+@media (max-width:375px){  /* Mobile M */
+    .layout {
+        gap: 4rem;
+        flex-direction: column;
+        display: flex;
+    }
+    .img-kontak img {
+        max-height: 15rem;
+        height: 100%;
+        width: 100%;
+    }
+    .footer-1 img {
+        width: 48%;
+    }
+}
+
+@media (max-width: 320px) { /* Mobile S */
+    html {
+        font-size: 100%;
+        width: auto;
+    }
+    .texthome {
+        margin: 0;
+    }
+    .perusahaan {
+        padding: 0;
+    }
+}
