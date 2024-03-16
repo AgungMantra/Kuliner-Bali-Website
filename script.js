@@ -37,7 +37,7 @@ ScrollReveal({
     delay: 100
 });
 
-ScrollReveal().reveal('.texthome, .text, .wisata, .tiket, .layout-box, .perusahaan, .bayarimg, .kontak-container', { origin: 'bottom' });
+ScrollReveal().reveal('.texthome, .text, .home-gallery, .container, .layout-box, .perusahaan, .bayarimg, .kontak-container', { origin: 'bottom' });
 
 
 // test

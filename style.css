@@ -39,13 +39,22 @@ span {
     margin: .5rem;
     font-weight: 500;
 }
+.container-home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Tambahkan penyesuaian untuk konten di tengah */
+    background-color: #fff;
+    background-size: cover;
+    padding: 1rem; /* Tambahkan padding untuk responsif */
+}
 
 .home-gallery {
     margin:  1.625rem;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Mengatur wrap item saat ukuran layar terlalu kecil */
     width: 80%;
-    height: 350px;
+    max-width: 100%; /* Menyesuaikan lebar maksimum */
+    height: auto; /* Atur tinggi ke auto untuk responsif */
     border-radius: 15px;
     gap: 10px; /* Menambahkan jarak antara item */
     overflow: hidden; /* Menghilangkan gambar yang keluar dari area galeri */
@@ -53,8 +62,8 @@ span {
 }
 
 .item {
-    flex: 1;
-    height: 100%;
+    flex: 1 1 20%; /* Menyesuaikan lebar item */
+    height: 200px; /* Atur tinggi item sesuai kebutuhan */
     background-position: center;
     background-size: cover; /* Mengatur agar gambar tidak terpotong dan tanpa berulang */
     background-repeat: no-repeat; /* Menghindari gambar berulang */
@@ -72,14 +81,21 @@ span {
 .item:nth-child(3) {
     background-image: url(imageasset/es\ daluman\ 2.jpg);
 }
-
 .item:nth-child(4) {
-    background-image: url(imageasset/RUJAK.jpg);
+    background-image: url(imageasset/es\ daluman\ 1.jpg);
+}
+.item:nth-child(5) {
+    background-image: url(imageasset/download.jpg);
+}
+
+.item:nth-child(1),
+.item:nth-child(5) {
+    flex-basis: 40%; /* Menyesuaikan lebar item untuk item pertama dan terakhir */
 }
 
 .item:hover {
-    flex: 4;
-}
+    flex-grow: 5; /* Menyesuaikan pertumbuhan fleksibel saat hover */
+}   
 
 /* Home */
 .home{
@@ -87,6 +103,7 @@ span {
     justify-content: space-between;
     align-items: center;
     background: var(--homecolor) ;
+    flex-direction: column;
 }
 
 .navbar{
@@ -122,11 +139,6 @@ span {
 .control a:hover {
     color: var(--hover);
     text-decoration: underline;
-}
-
-.home {
-    display: flex;
-    flex-direction: column;
 }
 
 .hamburger {
@@ -170,14 +182,6 @@ span {
     font-size: 1.125rem;
 }
 
-.home-img img {
-    max-width: 75rem;
-    display: block;
-    border-radius: inherit;
-    object-position: center;
-    object-fit: cover;
-}
-
 .text {
     align-items: center;
     display: flex;
@@ -189,9 +193,6 @@ span {
     text-align: center;
 }
 
-section{
-    background-color: var(--sectionbg) ;
-}
 /* Video container */
 .video-container {
     display: flex;
@@ -203,17 +204,27 @@ section{
 .makanan-container {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    padding: 4rem 2.5rem;
+    gap: 2rem; /* Mengurangi jarak antara elemen */
+    padding: 2rem; /* Menyesuaikan padding */
     align-items: center;
+    background-color: var(--sectionbg);
+}
+.minuman-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Mengurangi jarak antara elemen */
+    padding: 2rem; /* Menyesuaikan padding */
+    align-items: center;
+    background-color: var(--homecolor);
 }
 
 /* Kuliner Makanan */
 .kuliner-makanan-container {
     align-items: center;
     display: flex;
-    gap: 5rem;
-    padding: 1.5rem 1.5rem;
+    flex-wrap: wrap; /* Mengatur wrap item saat ukuran layar terlalu kecil */
+    gap: 2rem; /* Menambahkan jarak antar item */
+    padding: 2rem; /* Menyesuaikan padding */
     justify-content: center;
     background-color: #ffefef; /* Warna latar belakang */
     border-radius: 15px;
@@ -222,36 +233,66 @@ section{
 .penjelasan-singkat {
     align-items: center;
     display: flex;
-    gap: 3rem; /* Mengurangi jarak antara elemen */
-    padding: 2rem; /* Mengurangi padding */
+    flex-direction: column; /* Mengatur tata letak menjadi kolom pada layar kecil */
+    gap: 2rem; /* Mengurangi jarak antara elemen */
+    padding: 2rem; /* Menyesuaikan padding */
     border-radius: 15px;
-    background-color: #FFE5CA;
-    max-width: 900px; /* Batasi lebar kontainer */
+    background-color: var(--homecolor);
+    max-width: 100%; /* Mengatur lebar maksimum */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+.penjelasan-singkat-minuman{
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak menjadi kolom pada layar kecil */
+    gap: 2rem; /* Mengurangi jarak antara elemen */
+    padding: 2rem; /* Menyesuaikan padding */
+    border-radius: 15px;
+    background-color: var(--sectionbg);
+    max-width: 100%; /* Mengatur lebar maksimum */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
-
-.text-makanan {
+.kuliner-makanan-container,
+.penjelasan-singkat,
+.penjelasan-singkat-minuman {
     display: flex;
-    flex-direction: column;
-    color: var(--text-color);
+    flex-direction: column; /* Mengatur tata letak menjadi kolom pada layar kecil */
+    gap: 1rem; /* Mengurangi jarak antara elemen */
+    padding: 1rem; /* Menyesuaikan padding */
+    border-radius: 15px;
+    max-width: 100%; /* Mengatur lebar maksimum */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
-
+.img-penjelasan img{
+    width: 100%; /* Mengatur gambar agar mengisi lebar container */
+    max-height: 200px; /* Batasi tinggi gambar untuk layar hp */
+    border-radius: 10px; /* Menyesuaikan dengan border-radius container */
+}
 .text-makanan p {
-    margin-bottom: 1rem; /* Mengurangi margin bottom */
-}
-
-.img-kuliner {
-    flex: 1; /* Memperbaiki fleksibilitas tata letak */
+    margin-bottom: 0.5rem; /* Mengurangi margin bottom */
 }
 
 .img-kuliner img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 300px; /* Batasi tinggi gambar */
-    display: block;
+    width: 100%; /* Mengatur gambar agar mengisi lebar container */
+    max-height: 200px; /* Batasi tinggi gambar untuk layar hp */
     border-radius: 10px; /* Menyesuaikan dengan border-radius container */
-    object-position: center;
+}
+
+/* Aturan untuk layar dengan lebar maksimum 576px (hp) */
+@media screen and (max-width: 576px) {
+    .kuliner-makanan-container,
+    .penjelasan-singkat,
+    .penjelasan-singkat-minuman {
+        padding: 0.5rem; /* Menyesuaikan padding untuk ukuran layar hp */
+    }
+
+    .img-kuliner img {
+        max-height: 150px; /* Mengurangi tinggi gambar untuk layar hp */
+    }
+    .img-penjelasan img{
+        max-height: 150px;
+    }
 }
 
 /* Komponen Kuliner */
@@ -537,6 +578,13 @@ footer{
     .text {
         padding: 0;
     }
+    .video-container {
+        padding: 0 1rem; /* Penyesuaian padding untuk ukuran layar kecil */
+    }
+    .video-container video {
+        max-width: 90%; /* Mengatur lebar maksimum video menjadi 90% dari lebar layar */
+        max-height: auto; /* Mengatur tinggi video agar mengikuti proporsi aslinya */
+    }
     .box1 {
         flex-direction: column;
     }
@@ -589,7 +637,15 @@ footer{
         padding-bottom: 3.5rem;
     }
 }
-
+@media screen and (max-width: 576px) {
+    .video-container {
+        padding: 0 0.5rem; /* Penyesuaian padding untuk ukuran layar yang lebih kecil lagi */
+    }
+    .video-container video {
+        max-width: 100%; /* Mengatur lebar maksimum video menjadi 100% dari lebar layar */
+        max-height: auto; /* Mengatur tinggi video agar mengikuti proporsi aslinya */
+    }
+}
 @media (max-width: 425px) { /* Selular L */
     html {
         font-size: 100%;
