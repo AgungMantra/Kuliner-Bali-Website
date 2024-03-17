@@ -8,6 +8,13 @@
     --sectionbg: #FFF3E2;
 }
 
+html, body {
+    height: 100%;
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -33,19 +40,92 @@ h2 {
     line-height: 1.3em;
 }
 
-span {
+.logo span{
     color: var(--higlight);
-    font-size: 18px;
+    font-size: 2.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+.logo-footer span{
+    color: var(--higlight);
+    font-size: 2.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+.logo-footer{
+    color: black;
+    font-size: 2.5rem;
+    font-family: monsterrat;
+    font-style: italic;
+}
+span{
+    color: var(--higlight);
+    font-size: 2.5rem;
     margin: .5rem;
     font-weight: 500;
 }
+
+/* Kuliner Bali */
+.kuliner-bali{
+    padding: 2rem;
+    gap: 1rem;
+    align-items: center;
+    display: flexbox;
+}
+.penjelasankuliner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Tambahkan jarak antar elemen */
+    align-items: center;
+    text-align: center; /* Pusatkan teks */
+}
+
+.img-kulinerbali img {
+    width: 100%; /* Agar gambar menyesuaikan lebar container */
+    max-width: 400px; /* Batasi lebar gambar */
+    border-radius: 15px; /* Tambahkan border-radius */
+}
+
+.penjelasan-kuliner-bali {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Tambahkan jarak antar elemen */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Pusatkan teks */
+}
+.img-kulinerbali{
+    width: 300px;
+}
+.text-penjelasan {
+    text-align: center;
+    max-width: 700px; /* Batasi lebar teks */
+    font-size: 1.2rem; /* Ukuran teks */
+    color: #333; /* Warna teks */
+}
+
+@media (min-width: 768px) {
+    .penjelasankuliner-container {
+        flex-direction: row; /* Ubah menjadi layout baris pada layar yang lebih besar */
+        text-align: left; /* Atur teks ke kiri pada layar yang lebih besar */
+    }
+
+    .penjelasan-kuliner-bali {
+        align-items: flex-start; /* Pusatkan elemen secara vertikal ke atas pada layar yang lebih besar */
+        text-align: left; /* Atur teks ke kiri pada layar yang lebih besar */
+    }
+
+    .text-penjelasan {
+        font-size: 1.4rem; /* Tingkatkan ukuran teks pada layar yang lebih besar */
+    }
+}
+
 .container-home-image {
     display: flex;
     justify-content: center;
     align-items: center; /* Tambahkan penyesuaian untuk konten di tengah */
     background-color: #fff;
     background-size: cover;
-    padding: 1rem; /* Tambahkan padding untuk responsif */
 }
 
 .home-gallery {
@@ -102,8 +182,14 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--homecolor) ;
+    background-image: url('imageasset/homebackground-min.jpg'); /* Ganti 'url_gambar_anda.jpg' dengan URL gambar Anda */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     flex-direction: column;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%; /* Pastikan lebar penuh */
 }
 
 .navbar{
@@ -114,10 +200,6 @@ span {
     align-items: center;
     max-width: 75rem;
     gap: 21rem;
-}
-
-.navbar img {
-    max-width: 8rem;
 }
 
 .nav {
@@ -132,7 +214,7 @@ span {
 }
 
 .control a {
-    color: var(--text-color);
+    color: #fff;
     padding: .5rem .75rem;
 }
 
@@ -153,7 +235,7 @@ span {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: black;
+    background-color: white;
 }
 
 .texthome {
@@ -161,8 +243,10 @@ span {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding-top: 4rem;
-    margin: 0 2rem;
+    padding: 2rem; /* Sesuaikan padding sesuai kebutuhan */
+    background-color: rgba(255, 255, 255, 0.8); /* Atur warna latar belakang dengan opacity */
+    border-radius: 15px; /* Tambahkan border-radius jika diinginkan */
+    margin: 2rem;
     color: var(--text-color);
 }
 
@@ -181,7 +265,20 @@ span {
 .texthome p {
     font-size: 1.125rem;
 }
-
+.logo{
+    color: white;
+    font-size: 2.5rem;
+    font-family: monsterrat;
+    font-style: italic;
+    font-weight: bold;
+}
+.logo-footer{
+    color: black;
+    font-size: 2.5rem;
+    font-family: monsterrat;
+    font-style: italic;
+    font-weight: bold;
+}
 .text {
     align-items: center;
     display: flex;
@@ -218,82 +315,69 @@ span {
     background-color: var(--homecolor);
 }
 
-/* Kuliner Makanan */
 .kuliner-makanan-container {
-    align-items: center;
     display: flex;
-    flex-wrap: wrap; /* Mengatur wrap item saat ukuran layar terlalu kecil */
-    gap: 2rem; /* Menambahkan jarak antar item */
-    padding: 2rem; /* Menyesuaikan padding */
-    justify-content: center;
-    background-color: #ffefef; /* Warna latar belakang */
-    border-radius: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    max-width: 90%; /* Menambahkan lebar maksimum */
+    margin: 0 auto; /* Pusatkan kontainer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 .penjelasan-singkat {
-    align-items: center;
     display: flex;
-    flex-direction: column; /* Mengatur tata letak menjadi kolom pada layar kecil */
-    gap: 2rem; /* Mengurangi jarak antara elemen */
-    padding: 2rem; /* Menyesuaikan padding */
-    border-radius: 15px;
-    background-color: var(--homecolor);
-    max-width: 100%; /* Mengatur lebar maksimum */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-}
-.penjelasan-singkat-minuman{
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    display: flex;
-    flex-direction: column; /* Mengatur tata letak menjadi kolom pada layar kecil */
-    gap: 2rem; /* Mengurangi jarak antara elemen */
-    padding: 2rem; /* Menyesuaikan padding */
-    border-radius: 15px;
-    background-color: var(--sectionbg);
-    max-width: 100%; /* Mengatur lebar maksimum */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    gap: 2rem;
 }
 
-.kuliner-makanan-container,
-.penjelasan-singkat,
-.penjelasan-singkat-minuman {
-    display: flex;
-    flex-direction: column; /* Mengatur tata letak menjadi kolom pada layar kecil */
-    gap: 1rem; /* Mengurangi jarak antara elemen */
-    padding: 1rem; /* Menyesuaikan padding */
-    border-radius: 15px;
-    max-width: 100%; /* Mengatur lebar maksimum */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+.text-makanan {
+    flex: 1;
 }
-.img-penjelasan img{
-    width: 100%; /* Mengatur gambar agar mengisi lebar container */
-    max-height: 200px; /* Batasi tinggi gambar untuk layar hp */
-    border-radius: 10px; /* Menyesuaikan dengan border-radius container */
+
+.text-makanan h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
+
 .text-makanan p {
-    margin-bottom: 0.5rem; /* Mengurangi margin bottom */
+    font-size: 0.9rem;
+    color: #666;
 }
 
-.img-kuliner img {
-    width: 100%; /* Mengatur gambar agar mengisi lebar container */
-    max-height: 200px; /* Batasi tinggi gambar untuk layar hp */
-    border-radius: 10px; /* Menyesuaikan dengan border-radius container */
+.img-penjelasan {
+    flex: none;
 }
 
-/* Aturan untuk layar dengan lebar maksimum 576px (hp) */
-@media screen and (max-width: 576px) {
-    .kuliner-makanan-container,
-    .penjelasan-singkat,
-    .penjelasan-singkat-minuman {
-        padding: 0.5rem; /* Menyesuaikan padding untuk ukuran layar hp */
+.img-penjelasan img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .kuliner-makanan-container {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%; /* Mengatur lebar maksimum pada layar kecil */
     }
 
-    .img-kuliner img {
-        max-height: 150px; /* Mengurangi tinggi gambar untuk layar hp */
+    .penjelasan-singkat {
+        flex-direction: column;
     }
-    .img-penjelasan img{
-        max-height: 150px;
+
+    .text-makanan,
+    .img-penjelasan {
+        width: 100%;
     }
 }
+
 
 /* Komponen Kuliner */
 .Kuliner {
@@ -318,6 +402,11 @@ span {
 .container:hover {
     transform: translateY(-5px); /* Efek mengangkat saat hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+.img-kuliner img {
+    width: 100%; /* Mengatur gambar agar mengisi lebar container */
+    max-height: 200px; /* Batasi tinggi gambar untuk layar hp */
+    border-radius: 10px; /* Menyesuaikan dengan border-radius container */
 }
 
 .container .img-kuliner {
@@ -368,11 +457,11 @@ span {
 
 .sosmed a {
     display: flex;
-    color: #7387A0;
+    color: var(--text-color);
 }
 
 .sosmed a:hover {
-    color: #A9A8A2;
+    color: var(--higlight);
 }
 
 footer{
@@ -439,9 +528,6 @@ footer{
     .nav.active {
         display: block;
     }
-    .layout-img img {
-        max-width: 74rem;
-    }
     .texthome h1,
     .texthome p {
         width: 100%;
@@ -456,39 +542,15 @@ footer{
         width: 100%;
     }
 
-    /* Tentang Kami */
-    .tiket, .container {
+    /* Fun fact */
+    .kuliner, .container {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-    .tiket {
+    .Kuliner {
         display: flex;
         gap: 1.5rem;
-    }
-
-    /* Jadi Partner */
-    .partnerlist {
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem;
-    }
-    .kurang {
-        max-width: 7%;
-    }
-    .lengkap {
-        max-width: 25%;
-    }
-
-    /* Kontak */
-    .img-kontak img {
-        height: 18rem;
-    }
-    .kontak-container {
-        display: flex;
-        gap: 2.5rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 
     /* Footer */
@@ -507,25 +569,18 @@ footer{
 }
 
 @media (max-width: 1024px) { /* Laptop */
-    .layout-img img {
-        max-width: 63.5rem;
-    }
 
     .text p {
         width: auto;
     }
 
-    .wisata img {
+    .img-kuliner img {
         max-width: 18.2rem;
     }
 
     .text {
         max-width: 100%;
         padding: 0 2rem;
-    }
-
-    .layout, .partner {
-        padding: 4rem 2rem;
     }
 
     .lengkap {
@@ -540,12 +595,6 @@ footer{
 @media (max-width: 950px) { /* Custom */
     .layout-img img {
         max-width: 59rem;
-    }
-}
-
-@media (max-width: 850px) { /* Custom */
-    .layout-img img {
-        max-width: 53rem;
     }
 }
 
@@ -572,9 +621,6 @@ footer{
     .texthome h1 {
         width: 100%;
     }
-    .layout, .partner {
-        padding: 4rem 1.25rem;
-    }
     .text {
         padding: 0;
     }
@@ -584,31 +630,6 @@ footer{
     .video-container video {
         max-width: 90%; /* Mengatur lebar maksimum video menjadi 90% dari lebar layar */
         max-height: auto; /* Mengatur tinggi video agar mengikuti proporsi aslinya */
-    }
-    .box1 {
-        flex-direction: column;
-    }
-    .partnerlist {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-    .perusahaan {
-        padding: 0 3.75rem;
-    }
-    .kontak-container {
-        flex-direction: column;
-    }
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-    .img-kontak {
-        width: 100%;
-    }
-    .img-kontak img {
-        object-fit: cover;
-        border-radius: 16px;
     }
     .footer {
         padding: 5rem 1.25rem 2.5rem;

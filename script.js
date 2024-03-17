@@ -37,9 +37,10 @@ ScrollReveal({
     delay: 100
 });
 
-ScrollReveal().reveal('.texthome, .text, .home-gallery, .container, .layout-box, .perusahaan, .bayarimg, .kontak-container', { origin: 'bottom' });
+ScrollReveal().reveal('.text, .home-gallery, .container, .layout-box, .perusahaan, .bayarimg, .kontak-container', { origin: 'bottom' });
 
 
-// test
+// Typing text
+
 
 
