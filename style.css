@@ -76,7 +76,7 @@ span{
     gap: 1rem; /* Tambahkan jarak antar elemen */
     align-items: center;
     justify-content: center;
-    text-align: center; /* Pusatkan teks */
+    text-align: center ; /* Pusatkan teks */
 }
 .img-kulinerbali{
     width: 300px;
@@ -641,7 +641,7 @@ span{
         flex-direction: column;
         padding-bottom: 3.5rem;
     }
-        .kuliner-makanan-container {
+    .kuliner-makanan-container {
         flex-direction: column;
         align-items: flex-start;
         max-width: 100%; /* Mengatur lebar maksimum pada layar kecil */
