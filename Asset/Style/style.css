@@ -135,21 +135,21 @@ span{
 }
 
 .item:nth-child(1) {
-    background-image: url(imageasset/download.jpg);
+    background-image: url(Asset/imageasset/download.jpg);
 }
 
 .item:nth-child(2) {
-    background-image: url(imageasset/es\ daluman\ 1.jpg);
+    background-image: url(Asset/imageasset/es\ daluman\ 1.jpg);
 }
 
 .item:nth-child(3) {
-    background-image: url(imageasset/es\ daluman\ 2.jpg);
+    background-image: url(Asset/imageasset/es\ daluman\ 2.jpg);
 }
 .item:nth-child(4) {
-    background-image: url(imageasset/es\ daluman\ 1.jpg);
+    background-image: url(Asset/imageasset/es\ daluman\ 1.jpg);
 }
 .item:nth-child(5) {
-    background-image: url(imageasset/download.jpg);
+    background-image: url(Asset/imageasset/download.jpg);
 }
 
 .item:nth-child(1),
@@ -166,7 +166,7 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('imageasset/homebackground-min.jpg'); /* Ganti 'url_gambar_anda.jpg' dengan URL gambar Anda */
+    background-image: url('Asset/imageasset/homebackground-min.jpg'); /* Ganti 'url_gambar_anda.jpg' dengan URL gambar Anda */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
