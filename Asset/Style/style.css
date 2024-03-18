@@ -133,25 +133,25 @@ span{
     background-repeat: no-repeat; /* Menghindari gambar berulang */
     transition: flex 0.8s ease;
 }
-
 .item:nth-child(1) {
-    background-image: url(imageasset/download.jpg);
+    background-image: url(../imageasset/es\ daluman\ 1.jpg);
 }
 
 .item:nth-child(2) {
-    background-image: url(imageasset/es\ daluman\ 1.jpg);
+    background-image: url(../imageasset/es\ daluman\ 2.jpg);
 }
 
 .item:nth-child(3) {
-    background-image: url(imageasset/es\ daluman\ 2.jpg);
-}
-.item:nth-child(4) {
-    background-image: url(imageasset/es\ daluman\ 1.jpg);
-}
-.item:nth-child(5) {
-    background-image: url(imageasset/download.jpg);
+    background-image: url(../imageasset/download.jpg);
 }
 
+.item:nth-child(4) {
+    background-image: url(../imageasset/RUJAK.jpg);
+}
+
+.item:nth-child(5) {
+    background-image: url(../imageasset/es\ daluman\ 2.jpg);
+}
 .item:nth-child(1),
 .item:nth-child(5) {
     flex-basis: 40%; /* Menyesuaikan lebar item untuk item pertama dan terakhir */
@@ -162,20 +162,21 @@ span{
 }   
 
 /* Home */
-.home{
+.home {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('imageasset/homebackground-min.jpg'); /* Ganti 'url_gambar_anda.jpg' dengan URL gambar Anda */
+    background-image: url('../imageasset/homebackground-min.jpg');
+    /* Ganti 'url_gambar_anda.jpg' dengan URL gambar Anda */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     flex-direction: column;
     background-repeat: no-repeat;
     height: 100%;
-    width: 100%; /* Pastikan lebar penuh */
+    width: 100%;
+    /* Pastikan lebar penuh */
 }
-
 .navbar{
     display: flex;
     padding: 1rem 2.5rem;
