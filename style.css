@@ -40,24 +40,6 @@ h2 {
     line-height: 1.3em;
 }
 
-.logo span{
-    color: var(--higlight);
-    font-size: 2.5rem;
-    margin: .5rem;
-    font-weight: bold;
-}
-.logo-footer span{
-    color: var(--higlight);
-    font-size: 2.5rem;
-    margin: .5rem;
-    font-weight: bold;
-}
-.logo-footer{
-    color: black;
-    font-size: 2.5rem;
-    font-family: monsterrat;
-    font-style: italic;
-}
 span{
     color: var(--higlight);
     font-size: 2.5rem;
@@ -84,6 +66,8 @@ span{
     width: 100%; /* Agar gambar menyesuaikan lebar container */
     max-width: 400px; /* Batasi lebar gambar */
     border-radius: 15px; /* Tambahkan border-radius */
+    height: 450px;
+    object-fit: fill;
 }
 
 .penjelasan-kuliner-bali {
@@ -279,6 +263,19 @@ span{
     font-style: italic;
     font-weight: bold;
 }
+.logo span{
+    color: var(--higlight);
+    font-size: 2.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+.logo-footer span{
+    color: var(--higlight);
+    font-size: 2.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+
 .text {
     align-items: center;
     display: flex;
@@ -312,7 +309,7 @@ span{
     gap: 2rem; /* Mengurangi jarak antara elemen */
     padding: 2rem; /* Menyesuaikan padding */
     align-items: center;
-    background-color: var(--homecolor);
+    background-color: var(--sectionbg);
 }
 
 .kuliner-makanan-container {
@@ -361,22 +358,6 @@ span{
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    .kuliner-makanan-container {
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 100%; /* Mengatur lebar maksimum pada layar kecil */
-    }
-
-    .penjelasan-singkat {
-        flex-direction: column;
-    }
-
-    .text-makanan,
-    .img-penjelasan {
-        width: 100%;
-    }
-}
 
 
 /* Komponen Kuliner */
@@ -423,8 +404,9 @@ span{
 .footer {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 1rem;
     padding: 5rem 2.5rem 2.5rem;
+    background-color: var(--homecolor);
 }
 
 .footer-1 {
@@ -463,19 +445,21 @@ span{
 .sosmed a:hover {
     color: var(--higlight);
 }
-
-footer{
-    background-color: var(--sectionbg);
-}
 .footer-2{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer-2 p {
     color: #858585;
 }
-
+.footer-img {
+    max-width: 150px; /* Atur lebar maksimum gambar */
+    max-height: 150px; /* Atur tinggi maksimum gambar */
+    width: auto; /* Biarkan lebar gambar menyesuaikan proporsi aslinya */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan proporsi aslinya */
+}
 
 /* RENPONSIF */
 @media (max-width: 1199px) { /* Custom Resonsif *?
@@ -656,6 +640,20 @@ footer{
     .link {
         flex-direction: column;
         padding-bottom: 3.5rem;
+    }
+        .kuliner-makanan-container {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%; /* Mengatur lebar maksimum pada layar kecil */
+    }
+
+    .penjelasan-singkat {
+        flex-direction: column;
+    }
+
+    .text-makanan,
+    .img-penjelasan {
+        width: 100%;
     }
 }
 @media screen and (max-width: 576px) {

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --text-color: #000000;
+    --higlight: #E74646;
+    --hover: #E74646;
+    --homecolor: #FFE5CA;
+    --sectionbg: #FFF3E2;
+}
+/* CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Untuk menghapus efek scroll */
+}
+
+.navbar2 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Pastikan navbar di atas video */
+    background-color: black; /* Efek transparan */
+}
+
+.nav-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-cinematic {
+    color: white;
+    font-size: 2.5rem;
+    font-family: monsterrat;
+    font-style: italic;
+    font-weight: bold;
+}
+.logo-cinematic span{
+    color: var(--higlight);
+    font-size: 2.5rem;
+    font-family: monsterrat;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.cinematic-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Membuat video berada di bawah navbar */
+    overflow: hidden; /* Menghilangkan scroll */
+}
+
+.cinematic-video-container video {
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Memposisikan video di tengah */
+    opacity: 0.8; /* Efek transparan */
+    object-fit: cover; /* Membuat video memenuhi kontainer tanpa terpotong */
+    object-position: center; /* Memastikan video selalu terpusat */
+}

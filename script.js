@@ -33,12 +33,13 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 ScrollReveal({
     reset: false,
     distance: '30px',
-    duration: 800,
+    duration: 1000,
     delay: 100
 });
 
-ScrollReveal().reveal('.text, .home-gallery, .container, .layout-box, .perusahaan, .bayarimg, .kontak-container', { origin: 'bottom' });
-
+ScrollReveal().reveal('.texthome, .text, .home-gallery, .video-container,.container', { origin: 'bottom' });
+ScrollReveal().reveal('.img-kulinerbali,.text-makanan ,.img-kuliner' ,{ origin: 'left' });
+ScrollReveal().reveal('.text-penjelasan,.img-penjelasan' ,{ origin: 'right' });
 
 // Typing text
 
