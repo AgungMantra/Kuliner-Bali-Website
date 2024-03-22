@@ -37,9 +37,9 @@ ScrollReveal({
     delay: 100
 });
 
-ScrollReveal().reveal('.texthome, .text, .home-gallery, .video-container,.container', { origin: 'bottom' });
-ScrollReveal().reveal('.img-kulinerbali,.text-makanan ,.img-kuliner' ,{ origin: 'left' });
-ScrollReveal().reveal('.text-penjelasan,.img-penjelasan' ,{ origin: 'right' });
+ScrollReveal().reveal('.texthome, .text, .home-gallery, .video-container,.container,.contact-us-container', { origin: 'bottom' });
+ScrollReveal().reveal('.img-kulinerbali,.text-makanan ,.img-kuliner,.thanks' ,{ origin: 'left' });
+ScrollReveal().reveal('.text-penjelasan,.img-penjelasan,.contact' ,{ origin: 'right' });
 
 // Typing text
 

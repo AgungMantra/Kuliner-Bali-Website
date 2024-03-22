@@ -47,6 +47,7 @@ body, html {
 }
 
 .cinematic-video-container {
+    background-image: linear-gradient(to right rgba(0, 0, 0, 0.100), rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 50));
     position: fixed;
     top: 0;
     left: 0;

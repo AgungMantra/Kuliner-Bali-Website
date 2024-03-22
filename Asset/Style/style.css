@@ -181,8 +181,25 @@ span {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  /* Pastikan lebar penuh */
+  animation: changeBackground 20s ease-in infinite ;
 }
+
+@keyframes changeBackground {
+  0% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
+          url("../imageasset/homebackground-min.jpg");
+}
+  50% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
+          url("../imageasset/download.jpg");
+  }
+  100% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
+          url("../imageasset/es\ daluman\ 1.jpg");
+  }
+}
+
+
 .navbar {
   display: flex;
   padding: 1rem 2.5rem;
@@ -440,8 +457,8 @@ h1 {
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
     url("../imageasset/download.jpg");
-    width: 400px;
-    height: 450px;
+    width: 350px;
+    height: 400px;
     align-items: center;
     justify-content: center;
     display: flex;
