@@ -16,12 +16,14 @@
 </head>
 
 <body>
-   
     <!-- Home section -->
     <section class="home" id="home">
         <header class="navbar">
             <div class="nav-layout">
-                <a href="Asset/cinematic-video.html"><p class="logo">Kuliner <span class="logo">Bali</span></p></a>
+                <a href="Asset/cinematic-video.html" onclick="showLoader(event)">
+                    <p class="logo">Kuliner <span class="logo">Bali</span></p>
+                </a>
+                
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -36,10 +38,11 @@
                 </div>
             </nav>
         </header>
-        <div class="texthome">
-            <h2>LEZATNYA KULINER BALI</h2>
+        <div class="texthome" class="zoom">
+            <h2> KULINER BALI</h2>
         </div>
     </section>
+
     <section class="kuliner-bali" id="PenjelasanKuliner">
         <div class="container-home-image">
             <div class="home-gallery">
@@ -71,11 +74,11 @@
 
     <!-- Kuliner Makanan Sections -->
     <section id="KulinerMakanan" class="makanan-container">
-        <div class="texthome">
-            <h2>Makanan Khas Bali Rujak Kuah Pindang</h2>
+        <div class="text">
+            <h2>Makanan Khas Bali <span>Rujak Kuah Pindang</span> </h2>
         </div>
         <div class="video-container">
-            <video width="640" height="360"  controls>
+            <video width="640" height="360" controls>
                 <source src="Asset/videoasset/[Official Lyric Video] First Rabbit - JKT48.mp4" type="video/mp4">
             </video>
         </div>
@@ -89,10 +92,11 @@
                         dan segar karena dibuat dari kaldu pindang yang khas.
                         Kuliner ini dapat dipadukan dengan buah-buahan atau rumput laut, dan bisa disajikan sebagai
                         hidangan yang segar dan menyegarkan. Bahan utama yang digunakan dalam pembuatan rujak kuah
-                        pindang adalah ikan pindang, serai, daun jeruk, garam, cabai rawit, gula pasir, dan terasi.
-                        Cara membuatnya adalah dengan membuat kuah pindang dari ikan pindang, lalu mencampurkan bumbu
-                        kuah dan buah-buahan atau rumput laut. Rujak kuah pindang ini menjadi menu wajib di setiap rumah
-                        makan di Bali dan sangat disukai oleh penikmat rujak dan pecinta kuliner yang pedas</p>
+                        pindang adalah ikan pindang, serai, daun jeruk, garam, cabai rawit, gula pasir, dan terasi </p>
+
+                    <p>Cara membuatnya adalah dengan membuat kuah pindang dari ikan pindang, lalu mencampurkan bumbu
+                       kuah dan buah-buahan atau rumput laut. Rujak kuah pindang ini menjadi menu wajib di setiap rumah
+                       makan di Bali dan sangat disukai oleh penikmat rujak dan pecinta kuliner yang pedas</p>
                 </div>
                 <div class="img-penjelasan">
                     <img src="Asset/imageasset/download.jpg" alt="image">
@@ -144,23 +148,25 @@
 
     <!-- Kuliner Minuman Sections -->
     <section id="KulinerMinuman" class="minuman-container">
-        <div class="texthome">
-            <h2>Minuman Khas Bali Es Daluman</h2>
+        <div class="text">
+            <h2>Minuman Khas Bali <span>Es Daluman</span> </h2>
         </div>
+
         <div class="video-container">
-            <video width="640" height="360"  controls>
+            <video width="640" height="360" controls>
                 <source src="Asset/videoasset/[Official Lyric Video] First Rabbit - JKT48.mp4" type="video/mp4">
             </video>
         </div>
+
         <div class="kuliner-makanan-container">
             <div class="penjelasan-singkat">
                 <div class="text-makanan">
                     <h2>Es Daluman</h2>
-                    <p>Es Daluman adalah minuman tradisional Bali yang terbuat dari ekstrak
-                        daun cincau yang diberi sirup gula merah dan santan, memberikan rasa manis dan lembut yang
-                        menyegarkan. Biasanya disajikan dingin sebagai minuman penyegar, es Daluman populer di Bali
-                        karena kelezatannya yang unik dan kemampuannya untuk menyegarkan tenggorokan di tengah cuaca
-                        tropis yang panas</p>
+                    <p>Es Daluman adalah minuman tradisional Bali yang terbuat dari ekstrak daun cincau yang diberi sirup gula merah dan santan. 
+                    Minuman ini memiliki rasa manis dan lembut yang menyegarkan, yang membuatnya populer di Bali karena kelezatannya yang unik dan kemampuannya untuk menyegarkan tenggorokan di tengah cuaca tropis yang panas. Es Daluman dibuat dengan bahan utama perasan daun cincau yang berwarna kehijauan, dan dibiarkan mengeras hingga teksturnya seperti jelly. Setelah mengeras, cincau hijau dibersihkan dan dipotong sesuai ukuran yang diinginkan.
+                    </p>
+                    <p>Es Daluman disajikan dengan santan, gula jawa cair atau sirup gula yang diberi pewarna merah, dan ditambahkan es serut segar. Minuman ini dapat ditemukan di warung-warung yang menjual makanan khas Bali, seperti Grand Hyatt Nusa Dua Bali, dan juga di sejumlah hotel di wilayah Bali.
+                    Es Daluman memiliki khasiat tinggi untuk kesehatan, seperti meredakan panas dalam dan melancarkan pencernaan.</p>
                 </div>
                 <div class="img-penjelasan">
                     <img src="Asset/imageasset/download.jpg" alt="image">
@@ -213,51 +219,89 @@
         </div>
     </section>
 
-    <section class="Contact-us" id="contact-us">
-        <div class="sosmed">
-            <a href="https://github.com/AgungMantra/Kuliner-Bali-Website-github.io" target="_blank"><iconify-icon icon="mdi:github"></iconify-icon></a>
-            <a href="#"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
-            <a href="#"><iconify-icon icon="pajamas:twitter"></iconify-icon></a>
-        </div>
-        <div class="contact-us-container">
-            <div class="contact-img">
-                <div class="thanks">
-                    <h3>TERIMA KASIH SUDAH BERKUNJUNG SILAHKAN TINGGALKAN PESAN</h3>
-                </div>
-            </div>
-            <div class="contact">
-                <form action="">
-                    <h2 class="lg-view">Contact <Span>Me</Span></h2>
-                    <input type="text" placeholder="Nama">
-                    <input type="email" placeholder="Alamat Email">
-                    <textarea rows="10" placeholder="Pesan"></textarea>
-                    <button type="submit">Kirim</button>
-                </form>
-            </div>
-        </div>
-    </section>
     <!-- Footer-->
     <footer class="footer">
+
+        <div class="contact-us-container">
+            <div class="footer-1">
+                <div class="contact">
+                    <form action="">
+                        <h2 class="lg-view">Contact <Span>Me</Span></h2>
+                        <input type="text" placeholder="Nama" id="username">
+                        <input type="email" placeholder="Alamat Email" id="email">
+                        <textarea rows="10" placeholder="Pesan" id="message"></textarea>
+                        <button type="submit" id="submit">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-1">
-            <a href="Asset/cinematic-video.html"><p class="logo-footer">Kuliner <span class="logo-footer">Bali</span></p></a>
+            <a href="Asset/cinematic-video.html">
+                <p class="logo-footer">Kuliner <span class="logo-footer">Bali</span></p>
+            </a>
             <div class="link">
                 <a href="#home">Home</a>
                 <a href="#PenjelasanKuliner">Kuliner</a>
                 <a href="#KulinerMakanan">Makanan Khas Bali</a>
                 <a href="#KulinerMinuman">Minuman Khas Bali</a>
             </div>
+
+            <div class="sosmed">
+                <a href="https://github.com/AgungMantra/Kuliner-Bali-Website-github.io" target="_blank"><iconify-icon
+                        icon="mdi:github"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="pajamas:twitter"></iconify-icon></a>
+            </div>
         </div>
 
+        
         <div class="footer-2">
             <p>© Created By Agung Mantra </p>
-            <a href="#">Terms & Conditions</a>
             <img class="footer-img" src="Asset/imageasset/Gungwahimg.png" alt="">
         </div>
     </footer>
+    <!-- Firebase Script -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAfiwRIV8y4l5qfd00WR8zI4jsVQHZ1Llg",
+            authDomain: "kulinerbali-43609.firebaseapp.com",
+            projectId: "kulinerbali-43609",
+            storageBucket: "kulinerbali-43609.appspot.com",
+            messagingSenderId: "481552511796",
+            appId: "1:481552511796:web:f61a738b76ed4e56ebab61",
+            measurementId: "G-RL4DQ0N8Z6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        //   Get references to database
+        const db = getDatabase(app);
+
+        document.getElementById("submit").addEventListener('click', function (e) {
+            e.preventDefault();
+
+            set(ref(db, "user/" + document.getElementById("username").value), 
+            {
+                username: document.getElementById("username").value,
+                email: document.getElementById("email").value,
+                messages: document.getElementById("message").value
+            });
+            alert("Terima Kasih Sudah mengirim Pesan");
+        })
+    </script>
 
     <script src="Asset/Script/script.js"></script>
     <!-- Icon script -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
 </body>
 
 </html>

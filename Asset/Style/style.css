@@ -25,7 +25,6 @@ body {
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
 }
-
 /* Text style */
 p {
   color: var(--text-color);
@@ -44,7 +43,7 @@ span {
   color: var(--higlight);
   font-size: 2.5rem;
   margin: 0.5rem;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Kuliner Bali */
@@ -263,21 +262,14 @@ span {
   color: var(--text-color);
 }
 
-.texthome p,
-h1 {
+.texthome h2 {
   width: 65%;
-}
-
-.texthome h1 {
   font-size: 3.5rem;
   font-weight: 500;
   letter-spacing: -3px;
   margin-bottom: 1.3rem;
 }
 
-.texthome p {
-  font-size: 1.125rem;
-}
 .logo {
   color: white;
   font-size: 2.5rem;
@@ -315,7 +307,10 @@ h1 {
   width: 100%;
   text-align: center;
 }
-
+.text h2{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
 /* Video container */
 .video-container {
   display: flex;
@@ -351,7 +346,7 @@ h1 {
   background-color: #f5f5f5;
   border-radius: 10px;
   max-width: 90%; /* Menambahkan lebar maksimum */
-  margin: 0 auto; /* Pusatkan kontainer */
+  margin-block: 2rem ; /* Pusatkan kontainer */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
@@ -429,16 +424,21 @@ h1 {
   padding-bottom: 0.5rem; /* Mengurangi padding bottom */
 }
 
-/* Contact us style */
-.Contact-us {
+
+/* Footer style */
+.footer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  align-items: center;
-  text-align: center;
-  background: var(--sectionbg);
-  width: 100%; /* Menambahkan width 100% untuk mengisi lebar layar */
+  gap: 1.7rem;
+  padding: 3rem 2.5rem 2.5rem;
+  background-color: var(--sectionbg);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgb(69, 211, 22) 12.5%,
+    rgb(65, 22, 221) 87.5%,
+    rgba(20, 225, 222, 0) 100%
+  );
 }
 
 .contact-us-container {
@@ -449,43 +449,14 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: 75%; /* Menambahkan width 100% untuk mengisi lebar layar */
-  background: linear-gradient(#e746466d , #ffe5cabe);
+  width: 100%; /* Menambahkan width 100% untuk mengisi lebar layar */
+  
 }
+form h2{
+  text-align: center;
+}
+/* Contact us style */
 
-.contact-img {
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-    url("../imageasset/download.jpg");
-    width: 350px;
-    height: 400px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.contact-img img {
-    width: 100%;
-    height: auto;
-}
-
-
-.thanks {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-.thanks h3,
-h1 {
-  font-size: 1.5rem;
-  font-family: "Courier New", Courier, monospace;
-  color: aliceblue;
-}
-/* Mengatur ukuran form kontak */
 .contact {
   width: 100%;
   max-width: 400px; /* Mengatur lebar maksimal form kontak */
@@ -536,19 +507,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.Contact-us h3 {
-  font-size: 1.5rem;
-  font-family: "Courier New", Courier, monospace;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.thanks h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
 .contact input,
 .contact textarea,
 .contact button {
@@ -568,55 +526,13 @@ h1 {
   color: white;
   font-weight: bold;
 }
-/* Mengatur tampilan icon sosial media */
-.sosmed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.sosmed a {
-  color: white;
-  font-size: 2rem;
-  transition: transform 0.3s;
-}
-
-.sosmed a:hover {
-  transform: scale(1.3);
-}
-
-/* Menambahkan responivensi */
-@media screen and (max-width: 768px) {
-  .contact-us-container {
-    flex-direction: column;
-  }
-  .contact-img {
-    width: 100%;
-  }
-  .contact {
-    margin-top: 2rem;
-  }
-}
-/* Footer style */
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 3rem 2.5rem 2.5rem;
-  background-color: var(--homecolor);
-}
-
 .footer-1 {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-.footer-1 img {
-  width: 6.875rem;
-  height: 3rem;
-}
+
 
 .link {
   display: flex;
@@ -629,19 +545,22 @@ h1 {
 }
 
 .sosmed {
-  align-items: center;
   display: flex;
-  gap: 5rem;
-  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .sosmed a {
-  display: flex;
-  color: var(--text-color);
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s;
+  color: salmon;
 }
 
 .sosmed a:hover {
-  color: var(--higlight);
+  transform: scale(1.3);
+  color: var(--hover);
 }
 .footer-2 {
   display: flex;
