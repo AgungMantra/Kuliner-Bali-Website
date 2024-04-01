@@ -23,7 +23,7 @@
                 <a href="Asset/cinematic-video.html" onclick="showLoader(event)">
                     <p class="logo">Kuliner <span class="logo">Bali</span></p>
                 </a>
-                
+
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -95,8 +95,8 @@
                         pindang adalah ikan pindang, serai, daun jeruk, garam, cabai rawit, gula pasir, dan terasi </p>
 
                     <p>Cara membuatnya adalah dengan membuat kuah pindang dari ikan pindang, lalu mencampurkan bumbu
-                       kuah dan buah-buahan atau rumput laut. Rujak kuah pindang ini menjadi menu wajib di setiap rumah
-                       makan di Bali dan sangat disukai oleh penikmat rujak dan pecinta kuliner yang pedas</p>
+                        kuah dan buah-buahan atau rumput laut. Rujak kuah pindang ini menjadi menu wajib di setiap rumah
+                        makan di Bali dan sangat disukai oleh penikmat rujak dan pecinta kuliner yang pedas</p>
                 </div>
                 <div class="img-penjelasan">
                     <img src="Asset/imageasset/download.jpg" alt="image">
@@ -162,11 +162,19 @@
             <div class="penjelasan-singkat">
                 <div class="text-makanan">
                     <h2>Es Daluman</h2>
-                    <p>Es Daluman adalah minuman tradisional Bali yang terbuat dari ekstrak daun cincau yang diberi sirup gula merah dan santan. 
-                    Minuman ini memiliki rasa manis dan lembut yang menyegarkan, yang membuatnya populer di Bali karena kelezatannya yang unik dan kemampuannya untuk menyegarkan tenggorokan di tengah cuaca tropis yang panas. Es Daluman dibuat dengan bahan utama perasan daun cincau yang berwarna kehijauan, dan dibiarkan mengeras hingga teksturnya seperti jelly. Setelah mengeras, cincau hijau dibersihkan dan dipotong sesuai ukuran yang diinginkan.
+                    <p>Es Daluman adalah minuman tradisional Bali yang terbuat dari ekstrak daun cincau yang diberi
+                        sirup gula merah dan santan.
+                        Minuman ini memiliki rasa manis dan lembut yang menyegarkan, yang membuatnya populer di Bali
+                        karena kelezatannya yang unik dan kemampuannya untuk menyegarkan tenggorokan di tengah cuaca
+                        tropis yang panas. Es Daluman dibuat dengan bahan utama perasan daun cincau yang berwarna
+                        kehijauan, dan dibiarkan mengeras hingga teksturnya seperti jelly. Setelah mengeras, cincau
+                        hijau dibersihkan dan dipotong sesuai ukuran yang diinginkan.
                     </p>
-                    <p>Es Daluman disajikan dengan santan, gula jawa cair atau sirup gula yang diberi pewarna merah, dan ditambahkan es serut segar. Minuman ini dapat ditemukan di warung-warung yang menjual makanan khas Bali, seperti Grand Hyatt Nusa Dua Bali, dan juga di sejumlah hotel di wilayah Bali.
-                    Es Daluman memiliki khasiat tinggi untuk kesehatan, seperti meredakan panas dalam dan melancarkan pencernaan.</p>
+                    <p>Es Daluman disajikan dengan santan, gula jawa cair atau sirup gula yang diberi pewarna merah, dan
+                        ditambahkan es serut segar. Minuman ini dapat ditemukan di warung-warung yang menjual makanan
+                        khas Bali, seperti Grand Hyatt Nusa Dua Bali, dan juga di sejumlah hotel di wilayah Bali.
+                        Es Daluman memiliki khasiat tinggi untuk kesehatan, seperti meredakan panas dalam dan
+                        melancarkan pencernaan.</p>
                 </div>
                 <div class="img-penjelasan">
                     <img src="Asset/imageasset/download.jpg" alt="image">
@@ -255,7 +263,7 @@
             </div>
         </div>
 
-        
+
         <div class="footer-2">
             <p>© Created By Agung Mantra </p>
             <img class="footer-img" src="Asset/imageasset/Gungwahimg.png" alt="">
@@ -264,36 +272,33 @@
     <!-- Firebase Script -->
     <script type="module">
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyAfiwRIV8y4l5qfd00WR8zI4jsVQHZ1Llg",
-            authDomain: "kulinerbali-43609.firebaseapp.com",
-            projectId: "kulinerbali-43609",
-            storageBucket: "kulinerbali-43609.appspot.com",
-            messagingSenderId: "481552511796",
-            appId: "1:481552511796:web:f61a738b76ed4e56ebab61",
-            measurementId: "G-RL4DQ0N8Z6"
+            apiKey: "AIzaSyDMmujT6e09E6TCaJZazf1jSvdHy5xBg94",
+            authDomain: "kulinerbali-69832.firebaseapp.com",
+            projectId: "kulinerbali-69832",
+            storageBucket: "kulinerbali-69832.appspot.com",
+            messagingSenderId: "93886879507",
+            appId: "1:93886879507:web:faea83dff2b58ad40f2ce6"
         };
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-
         //   Get references to database
         const db = getDatabase(app);
 
         document.getElementById("submit").addEventListener('click', function (e) {
             e.preventDefault();
 
-            set(ref(db, "user/" + document.getElementById("username").value), 
-            {
-                username: document.getElementById("username").value,
-                email: document.getElementById("email").value,
-                messages: document.getElementById("message").value
-            });
+            set(ref(db, "user/" + document.getElementById("username").value),
+                {
+                    email: document.getElementById("email").value,
+                    messages: document.getElementById("message").value,
+                    username: document.getElementById("username").value
+                });
             alert("Terima Kasih Sudah mengirim Pesan");
         })
     </script>
