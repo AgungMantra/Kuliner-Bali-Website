@@ -44,3 +44,8 @@ ScrollReveal().reveal('.text-penjelasan,.img-penjelasan,.contact' ,{ origin: 'ri
 
 
 
+// Conect to website setting
+function redirectToWebsiteGithub() {
+    // Ganti URL dengan URL yang diinginkan
+    window.open("https://github.com/AgungMantra/Kuliner-Bali-Website-github.io", "_blank");
+} 
