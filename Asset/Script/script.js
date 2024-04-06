@@ -49,3 +49,35 @@ function redirectToWebsiteGithub() {
     // Ganti URL dengan URL yang diinginkan
     window.open("https://github.com/AgungMantra/Kuliner-Bali-Website-github.io", "_blank");
 } 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navbar = document.querySelector('.navbar');
+
+  // Fungsi untuk menghapus kelas 'transparent' saat scroll ke bawah
+  function toggleNavbarBackground() {
+    if (window.scrollY > 0) {
+      navbar.classList.remove('transparent');
+    } else {
+      navbar.classList.add('transparent');
+    }
+  }
+
+  // Tambahkan event listener untuk scroll
+  window.addEventListener('scroll', toggleNavbarBackground);
+
+  // Panggil fungsi saat halaman dimuat
+  toggleNavbarBackground();
+});
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+      navbar.classList.remove('scrolled-up');
+    } else {
+      navbar.classList.remove('scrolled');
+      navbar.classList.add('scrolled-up');
+    }
+  });
+  

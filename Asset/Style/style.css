@@ -8,6 +8,69 @@
   --sectionbg: #fff3e2;
 }
 
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+  width: 100%;
+  fill: #333;
+  background-size: cover;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover img {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
 html,
 body {
   height: 100%;
@@ -198,16 +261,35 @@ span {
   }
 }
 
-
 .navbar {
   display: flex;
   padding: 1rem 2.5rem;
   justify-content: space-between;
-  position: relative;
+  position: fixed; /* Mengubah posisi menjadi fixed */
   align-items: center;
-  max-width: 75rem;
+  max-width: 100%;
   gap: 21rem;
+  top: 0; /* Menetapkan posisi atas */
+  width: 100%; /* Menetapkan lebar 100% */
+  z-index: 1000; /* Menetapkan indeks z agar lebih tinggi dari elemen lain */
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Efek transisi */
 }
+
+/* Tambahkan transparansi dan bayangan saat digulir */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+}
+
+/* Scroll ke bawah efek */
+.navbar.scrolled-up {
+  background-color: transparent; /* Mengubah warna latar belakang saat discroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+}
+
+
 
 .nav {
   display: flex;
@@ -245,30 +327,6 @@ span {
   background-color: white;
 }
 
-.texthome {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 2rem; /* Sesuaikan padding sesuai kebutuhan */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Atur warna latar belakang dengan opacity */
-  border-radius: 15px; /* Tambahkan border-radius jika diinginkan */
-  margin: 2rem;
-  color: var(--text-color);
-}
-
-.texthome h2 {
-  width: 65%;
-  font-size: 3.5rem;
-  font-weight: 500;
-  letter-spacing: -3px;
-  margin-bottom: 1.3rem;
-}
 
 .logo {
   color: white;
@@ -343,6 +401,20 @@ span {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+  background: var(--homecolor);
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+  border-radius: 10px;
+  max-width: 90%; /* Menambahkan lebar maksimum */
+  margin-block: 2rem ; /* Pusatkan kontainer */
+}
+.kuliner-minuman-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
   background: var(--sectionbg);
   box-shadow: 15px 15px 30px #bebebe,
              -15px -15px 30px #ffffff;
@@ -350,7 +422,6 @@ span {
   max-width: 90%; /* Menambahkan lebar maksimum */
   margin-block: 2rem ; /* Pusatkan kontainer */
 }
-
 .penjelasan-singkat {
   display: flex;
   flex-direction: row;
@@ -389,6 +460,7 @@ span {
   flex-wrap: wrap; /* Membungkus item saat ukuran layar terlalu kecil */
   gap: 2rem; /* Menambah jarak antar item */
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .container {
@@ -479,22 +551,7 @@ form h2{
   box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
   transition: 300ms ease-in-out;
 }
-/* .input {
-  border: none;
-  outline: none;
-  border-radius: 15px;
-  padding: 1em;
-  background-color: #ccc;
-  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
-  transition: 300ms ease-in-out;
-}
 
-.input:focus {
-  background-color: white;
-  transform: scale(1.05);
-  box-shadow: 13px 13px 100px #969696,
-             -13px -13px 100px #ffffff;
-} */
 .contact input:focus,
 .contact textarea:focus,
 .contact button:focus {
@@ -622,8 +679,8 @@ form h2{
 
 /* RENPONSIF */
 @media (max-width: 1199px) {
-  /* Custom Resonsif *?
-    /* Home Section */
+  /* Custom Responsif */
+  /* Home Section */
   .wisata,
   .bayarimg {
     overflow-x: hidden;
@@ -647,6 +704,7 @@ form h2{
     width: 100%;
     gap: 2.5rem;
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Ubah warna latar belakang dan sesuaikan transparansinya */
   }
   .navbar.active {
     padding: 1rem 2rem 4.5rem;
@@ -712,6 +770,7 @@ form h2{
     padding: 0;
   }
 }
+
 
 @media (max-width: 1024px) {
   /* Laptop */
@@ -811,7 +870,11 @@ form h2{
     align-items: flex-start;
     max-width: 100%; /* Mengatur lebar maksimum pada layar kecil */
   }
-
+  .kuliner-minuman-container {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%; /* Mengatur lebar maksimum pada layar kecil */
+  }
   .penjelasan-singkat {
     flex-direction: column;
   }
