@@ -447,7 +447,11 @@ span {
 .img-penjelasan {
   flex: none;
 }
-
+.img-penjelasan :hover{
+  transform: translate(8px, -8px);
+  box-shadow: 5px 5px 6px var(--sectionbg),
+  -5px -5px 6px var(--homecolor);
+}
 .img-penjelasan img {
   width: 100%;
   max-width: 350px;
@@ -466,19 +470,21 @@ span {
 .container {
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid var(--higlight);
   width: calc(
     33.33% - 1rem
   ); /* Menghitung lebar item dengan mengurangi margin */
+    box-shadow: 5px 5px 6px var(--sectionbg),
+               -5px -5px 6px var(--homecolor);
+  transition: 0.4s;
   max-width: 300px; /* Batasi lebar item */
   color: var(--text-color);
   text-align: center; /* Pusatkan teks */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi transform dan box-shadow */
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; Efek transisi transform dan box-shadow */
   position: relative; /* Membuat posisi relatif untuk kontainer */
 }
 
 .container:hover {
-  transform: translateY(-5px); /* Efek mengangkat saat hover */
+ translate: 0 -10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
 }
 .img-kuliner img {
