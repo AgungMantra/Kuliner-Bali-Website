@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
   --text-color: #000000;
@@ -8,74 +9,12 @@
   --sectionbg: #fff3e2;
 }
 
-.card {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card img {
-  width: 100%;
-  fill: #333;
-  background-size: cover;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-  transform: rotateX(0deg);
-}
-
-.card__title {
-  margin: 0;
-  font-size: 24px;
-  color: #333;
-  font-weight: 700;
-}
-
-.card:hover img {
-  scale: 0;
-}
-
-.card__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #777;
-  line-height: 1.4;
-}
-
 html,
 body {
   height: 100%;
   margin: 0; /* Menghilangkan margin default */
   padding: 0; /* Menghilangkan padding default */
+
 }
 
 * {
@@ -86,7 +25,7 @@ body {
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 /* Text style */
 p {
@@ -202,23 +141,23 @@ span {
   transition: flex 0.8s ease;
 }
 .item:nth-child(1) {
-  background-image: url(../imageasset/es\ daluman\ 1.jpg);
+  background-image: url(../imageasset/daluman1.jpg);
 }
 
 .item:nth-child(2) {
-  background-image: url(../imageasset/es\ daluman\ 2.jpg);
+  background-image: url(../imageasset/daluman2.jpg);
 }
 
 .item:nth-child(3) {
-  background-image: url(../imageasset/download.jpg);
+  background-image: url(../imageasset/rujak1.jpg);
 }
 
 .item:nth-child(4) {
-  background-image: url(../imageasset/RUJAK.jpg);
+  background-image: url(../imageasset/rujak2.jpg);
 }
 
 .item:nth-child(5) {
-  background-image: url(../imageasset/es\ daluman\ 2.jpg);
+  background-image: url(../imageasset/kuliner1.jpg);
 }
 .item:nth-child(1),
 .item:nth-child(5) {
@@ -235,7 +174,7 @@ span {
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-    url("../imageasset/homebackground-min.jpg");
+    url("../imageasset/kuliner2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -249,15 +188,18 @@ span {
 @keyframes changeBackground {
   0% {
       background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-          url("../imageasset/homebackground-min.jpg");
+          url("../imageasset//kuliner4.jpg");
+      background-size: cover;
 }
   50% {
       background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-          url("../imageasset/download.jpg");
+          url("../imageasset/rujak6.jpg");
+      background-size: cover;
   }
   100% {
       background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-          url("../imageasset/es\ daluman\ 1.jpg");
+          url("../imageasset/daluman4.jpg");
+      background-size: cover;
   }
 }
 
@@ -331,14 +273,14 @@ span {
 .logo {
   color: white;
   font-size: 2.5rem;
-  font-family: monsterrat;
+  font-family: "Dancing Script", cursive;
   font-style: italic;
   font-weight: bold;
 }
 .logo-footer {
   color: black;
   font-size: 2.5rem;
-  font-family: monsterrat;
+  font-family: "Dancing Script", cursive;
   font-style: italic;
   font-weight: bold;
 }
