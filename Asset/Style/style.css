@@ -174,7 +174,7 @@ span {
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-    url("../imageasset/kuliner2.jpg");
+    url("../imageasset/homebg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -188,7 +188,7 @@ span {
 @keyframes changeBackground {
   0% {
       background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-          url("../imageasset//kuliner4.jpg");
+          url("../imageasset/homebg.jpg");
       background-size: cover;
 }
   50% {
